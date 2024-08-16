@@ -9,6 +9,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.ML" Version="2.0.0" />
     <PackageReference Include="Microsoft.ML.FastTree" Version="2.0.0" />
+    <PackageReference Include="Microsoft.ML.TimeSeries" Version="2.0.0" />
   </ItemGroup>
   <ItemGroup>
     <None Update="Average Temperature 1900-2023- New.csv">
@@ -17,6 +18,11 @@
   </ItemGroup>
   <ItemGroup Label="MLModel1">
     <None Include="MLModel1.mlnet">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="MLModel2">
+    <None Include="MLModel2.mlnet">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

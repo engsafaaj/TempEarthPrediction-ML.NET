@@ -33,6 +33,9 @@
             buttonPredict = new Button();
             label2 = new Label();
             textBoxResult = new TextBox();
+            buttonTrain = new Button();
+            progressBar1 = new ProgressBar();
+            buttonPredictNewModel = new Button();
             SuspendLayout();
             // 
             // label1
@@ -78,11 +81,43 @@
             textBoxResult.Size = new Size(309, 34);
             textBoxResult.TabIndex = 1;
             // 
+            // buttonTrain
+            // 
+            buttonTrain.Location = new Point(366, 78);
+            buttonTrain.Name = "buttonTrain";
+            buttonTrain.Size = new Size(292, 49);
+            buttonTrain.TabIndex = 2;
+            buttonTrain.Text = "Train";
+            buttonTrain.UseVisualStyleBackColor = true;
+            buttonTrain.Click += buttonTrain_Click;
+            // 
+            // progressBar1
+            // 
+            progressBar1.Location = new Point(49, 371);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(597, 44);
+            progressBar1.Style = ProgressBarStyle.Marquee;
+            progressBar1.TabIndex = 3;
+            progressBar1.Visible = false;
+            // 
+            // buttonPredictNewModel
+            // 
+            buttonPredictNewModel.Location = new Point(366, 165);
+            buttonPredictNewModel.Name = "buttonPredictNewModel";
+            buttonPredictNewModel.Size = new Size(292, 46);
+            buttonPredictNewModel.TabIndex = 2;
+            buttonPredictNewModel.Text = "Predict";
+            buttonPredictNewModel.UseVisualStyleBackColor = true;
+            buttonPredictNewModel.Click += buttonPredictNewModel_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(408, 392);
+            ClientSize = new Size(670, 427);
+            Controls.Add(progressBar1);
+            Controls.Add(buttonTrain);
+            Controls.Add(buttonPredictNewModel);
             Controls.Add(buttonPredict);
             Controls.Add(textBoxResult);
             Controls.Add(label2);
@@ -90,10 +125,11 @@
             Controls.Add(label1);
             Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             MaximizeBox = false;
             Name = "Form1";
             Text = "TempPredictor";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -105,5 +141,8 @@
         private Button buttonPredict;
         private Label label2;
         private TextBox textBoxResult;
+        private Button buttonTrain;
+        private ProgressBar progressBar1;
+        private Button buttonPredictNewModel;
     }
 }
